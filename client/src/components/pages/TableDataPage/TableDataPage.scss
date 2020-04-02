@@ -1,0 +1,16 @@
+@import '../../../../styles/mixins.scss';
+@import '../../../../styles/variables.scss';
+
+#table-data-page {
+  .sort {
+    bottom: 0.5rem;
+    cursor: pointer;
+    padding: 0.25rem;
+    position: absolute;
+    right: 0.5rem;
+  }
+
+  .breadcrumb-item {
+    font-size: 1.5rem;
+  }
+}

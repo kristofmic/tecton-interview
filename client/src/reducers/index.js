@@ -1,13 +1,13 @@
 import { combineReducers } from 'redux';
 
-import configReducer from './configReducer';
+import dataReducer from './dataReducer';
 
 export const stateShape = {
-  config: 'config',
+  data: 'data',
 };
 
 const reducer = combineReducers({
-  [stateShape.config]: configReducer,
+  [stateShape.data]: dataReducer,
 });
 
 export default reducer;

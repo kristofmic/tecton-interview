@@ -38,6 +38,7 @@
     "react-redux": "7.2.0",
     "react-router-dom": "5.1.2",
     "react-transition-group": "4.3.0",
+    "react-virtualized": "9.21.2",
     "redux": "4.0.5",
     "redux-thunk": "2.3.0"
   },
@@ -45,7 +46,9 @@
     "@babel/cli": "7.8.4",
     "@babel/core": "7.8.7",
     "@babel/plugin-proposal-class-properties": "7.8.3",
+    "@babel/plugin-proposal-nullish-coalescing-operator": "7.8.3",
     "@babel/plugin-proposal-object-rest-spread": "7.8.3",
+    "@babel/plugin-proposal-optional-chaining": "7.9.0",
     "@babel/plugin-transform-runtime": "7.8.3",
     "@babel/preset-env": "7.8.7",
     "@babel/preset-react": "7.8.3",

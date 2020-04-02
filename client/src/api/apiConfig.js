@@ -1,5 +1,6 @@
 import axios from 'axios';
-import get from 'lodash/get';
+import set from 'lodash/set';
+import update from 'lodash/update';
 
 const TOTAL_RETRIES = 2;
 
@@ -8,34 +9,20 @@ const api = axios.create({
 });
 
 api.interceptors.response.use(undefined, error => {
-  const errorResponseStatus = get(error, 'response.status');
-  const errorCode = get(error, 'code');
-  const retries = get(error, 'config.headers.x-retries', 0);
+  const retries = error?.config?.headers?.['x-retries'] ?? 0;
 
-  if (errorCode === 'ECONNRESET' && retries < TOTAL_RETRIES) {
-    return api({
-      ...error.config,
-      headers: {
-        ...error.config.headers,
-        'x-retries': retries + 1,
-      },
-    });
+  if (error?.code === 'ECONNRESET' && retries < TOTAL_RETRIES) {
+    set(error, 'config.headers.x-retries', retries + 1);
+
+    return api(error.config);
   }
 
-  // eslint-disable-next-line no-param-reassign
-  error.response = {
-    ...error.response,
-    data: {
-      ...get(error, 'response.data'),
-      error: {
-        ...get(error, 'response.data.error'),
-        message:
-          get(error, 'response.data.error.message') ||
-          'Oops! Something went wrong. Please wait a moment and try again.',
-      },
-    },
-    status: errorResponseStatus || 500,
-  };
+  update(
+    error,
+    'response.data.error.message',
+    message => message || 'Oops! Something went wrong. Please wait a moment and try again.'
+  );
+  update(error, 'response.status', status => status || 500);
 
   throw error;
 });

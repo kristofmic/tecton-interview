@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import cx from 'classnames';
 
 import Button from '../Button';
+import Icon from '../Icon';
 
 function ErrorMessage(props) {
   const { children, className, onRetry } = props;
@@ -21,7 +22,7 @@ function ErrorMessage(props) {
       )}
       {onRetry && (
         <Button className="btn btn-secondary btn-sm" onClick={onRetry}>
-          <i className="icon icon-restore mr-2" />
+          <Icon icon="redo" />
           Retry
         </Button>
       )}

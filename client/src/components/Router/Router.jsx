@@ -15,11 +15,11 @@ function MainRouter(props) {
   return (
     <Router context={context} location={location}>
       <Switch>
-        <Route path={['/datasets']} component={AppPageContainer} />
+        <Route path={['/tables']} component={AppPageContainer} />
 
         <Route path={['/notfound']} component={ErrorPageContainer} exact />
 
-        <Redirect from="/" to="/datasets" exact />
+        <Redirect from="/" to="/tables" exact />
         <Redirect from="*" to="/notfound" />
       </Switch>
     </Router>

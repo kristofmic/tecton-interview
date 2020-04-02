@@ -8,31 +8,14 @@ if (process.env.BROWSER) {
 }
 
 function Icon(props) {
-  const { className, icon, icons, ...rest } = props;
-  const _icons = icons || [icon];
+  const { className, icon, ...rest } = props;
 
-  return (
-    <span
-      className={cx('icon-layer-container', className, {
-        'icon-layered': _icons.length > 1,
-      })}
-      {...rest}>
-      {_icons.map((i, idx) => (
-        <i
-          className={cx('icon', i, {
-            'icon-layer': idx > 0,
-          })}
-          key={i}
-        />
-      ))}
-    </span>
-  );
+  return <i className={cx('icon fa', `fa-${icon}`, className)} {...rest} />;
 }
 
 Icon.propTypes = {
   className: PropTypes.string,
   icon: PropTypes.string,
-  icons: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Icon;

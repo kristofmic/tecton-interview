@@ -12,7 +12,8 @@ export default function routes(server) {
   /**
    * API Routes
    */
-  server.get('/api/ping', api.ping);
+  server.get('/api/tables', api.getTables);
+  server.get('/api/tables/:name', api.getTableData);
 
   /**
    * Main Routes

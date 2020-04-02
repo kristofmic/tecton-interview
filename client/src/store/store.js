@@ -6,12 +6,10 @@ import pick from 'lodash/pick';
 import reducers, { stateShape } from '../reducers';
 import localData from '../utils/localData';
 
-let store;
-
 export function createStore(initialState) {
   const _initialState = initialState || localData() || {};
 
-  store = createReduxStore(
+  const store = createReduxStore(
     reducers,
     pick(_initialState, Object.values(stateShape)),
     applyMiddleware(thunk)
