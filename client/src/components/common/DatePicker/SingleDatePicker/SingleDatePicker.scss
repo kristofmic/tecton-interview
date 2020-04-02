@@ -1,0 +1,126 @@
+@import '../../../../../styles/variables.scss';
+
+.SingleDatePicker-container {
+  &.SingleDatePicker-container--noDate {
+    .SingleDatePickerInput_calendarIcon {
+      color: $gray-600;
+    }
+  }
+
+  .SingleDatePickerInput_calendarIcon {
+    color: $gray-900;
+    margin: 0;
+
+    &:hover,
+    &:focus,
+    &:active,
+    &:active:focus {
+      outline: none;
+    }
+  }
+
+  .DateInput {
+    &.DateInput__small {
+      letter-spacing: inherit;
+      width: 8.25rem;
+    }
+
+    .DateInput_input {
+      border: none;
+      color: $gray-900;
+      font-weight: bold;
+
+      &.DateInput_input__small {
+        font-size: 1rem;
+        line-height: 1.5;
+        padding: 0.5rem;
+      }
+
+      &.DateInput_input__focused {
+        border-bottom-color: transparent;
+      }
+
+      &::placeholder {
+        color: $gray-600;
+      }
+    }
+
+    .DateInput_fang {
+      display: none;
+    }
+  }
+
+  .SingleDatePicker_picker {
+    margin-top: -4px;
+
+    .DayPicker {
+      &.DayPicker__withBorder {
+        border-radius: 4px;
+        box-shadow: 0 0 1px $gray-600, 0 2px 8px rgba(0, 0, 0, 0.08);
+      }
+
+      .DayPickerNavigation {
+        &.DayPickerNavigation__horizontal {
+          display: flex;
+          justify-content: space-between;
+          padding: 0 0.5rem;
+          top: 0.8125rem;
+        }
+
+        .DayPickerNavigation_button {
+          .icon {
+            font-size: 1.125rem;
+            padding: 0.5rem 1rem;
+          }
+        }
+      }
+
+      .CalendarMonth_caption {
+        color: $gray-900;
+        font-size: 1rem;
+        padding-bottom: 2rem;
+        padding-top: 1rem;
+      }
+
+      .DayPicker_weekHeader {
+        color: $gray-700;
+        top: 3rem;
+      }
+
+      .CalendarDay__default {
+        border-color: $gray-300;
+        color: $gray-900;
+        transition: background-color 150ms linear, border-color 150ms linear,
+          color 150ms linear;
+
+        &:hover,
+        &:focus {
+          background-color: $gray-200;
+        }
+
+        &:active,
+        &:active:focus {
+          background-color: $gray-300;
+        }
+
+        &.CalendarDay__blocked_out_of_range {
+          color: $gray-600;
+
+          &:hover {
+            background-color: $white;
+          }
+        }
+
+        &.CalendarDay__selected {
+          background-color: $gray-900;
+          border-color: $gray-900;
+          color: $white;
+
+          &:hover {
+            background-color: $gray-900;
+          }
+        }
+      }
+    }
+  }
+}

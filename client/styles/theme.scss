@@ -1,0 +1,136 @@
+@import './variables';
+
+@import '../../node_modules/bootstrap/scss/bootstrap';
+
+/*** FONTS ***/
+
+.font-muli {
+  font-family: $font-family-muli;
+}
+
+/*** GENERAL ***/
+
+.rotate-90 {
+  transform: rotate(90deg);
+}
+
+.rotate-180 {
+  transform: rotate(180deg);
+}
+
+.rotate-270 {
+  transform: rotate(270deg);
+}
+
+.flip {
+  transform: scaleX(-1);
+}
+
+a {
+  transition: color 150ms linear;
+}
+
+/*** BUTTONS ***/
+.btn {
+  border-radius: 2px;
+  font-weight: bold;
+  padding: 1rem 1.5rem;
+  transition: background-color 150ms linear, border-color 150ms linear, color 150ms linear;
+
+  &:hover,
+  &:focus,
+  &:active,
+  &:active:focus,
+  &:active:not(:disabled):not(.disabled),
+  &:active:focus:not(:disabled):not(.disabled) {
+    box-shadow: none;
+    outline: none;
+  }
+}
+
+.btn-sm {
+  padding: 0.7rem;
+}
+
+.btn-light {
+  background-color: $gray-100;
+
+  &:hover,
+  &:focus {
+    background-color: $gray-200;
+    border-color: transparent;
+  }
+
+  &:active,
+  &:active:focus,
+  &:active:not(:disabled):not(.disabled),
+  &:active:focus:not(:disabled):not(.disabled) {
+    background-color: $gray-300;
+    border-color: transparent;
+  }
+}
+
+.btn-secondary {
+  &:hover,
+  &:focus {
+    background-color: $gray-300;
+    border-color: transparent;
+  }
+
+  &:active,
+  &:active:focus,
+  &:active:not(:disabled):not(.disabled),
+  &:active:focus:not(:disabled):not(.disabled) {
+    background-color: $gray-400;
+    border-color: transparent;
+  }
+
+  &:disabled,
+  &.disabled {
+    background-color: $white;
+    border-color: $gray-200;
+  }
+}
+
+/*** FORMS ***/
+.form-group {
+  label {
+    margin-bottom: 0.25rem;
+  }
+}
+
+.form-control {
+  height: initial;
+  padding: 1rem;
+  transition: background-color 150ms linear, border-color 150ms linear;
+
+  &:focus {
+    box-shadow: none !important;
+  }
+
+  + .valid-feedback,
+  + .invalid-feedback,
+  + small.form-text {
+    font-size: 0.75rem;
+    margin-top: 0.125rem;
+  }
+
+  + .valid-feedback,
+  + .invalid-feedback {
+    font-weight: bold;
+  }
+
+  &.form-control-sm {
+    padding: 0.7rem;
+  }
+
+  &.form-control-lg {
+    padding: 2rem;
+  }
+}
+
+.input-group {
+  .form-control {
+    left: -1px;
+  }
+}

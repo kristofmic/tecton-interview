@@ -1,0 +1,75 @@
+$white: #fff;
+$gray-100: #fafafb;
+$gray-200: #f5f6f6;
+$gray-300: #ebeced;
+$gray-400: #d6dadc;
+$gray-500: #c2c7ca;
+$gray-600: #adb4b9;
+$gray-700: #848f95;
+$gray-800: #1f323d;
+$gray-900: #001623;
+$black: #000;
+
+$highlight: #66c5fb;
+$blue: #009ff8;
+$accent: #0045f8;
+$red: #f83c00;
+$yellow: #f8df00;
+// $indigo:  #6610f2 !default;
+// $purple:  #6f42c1 !default;
+// $pink:    #e83e8c !default;
+// $orange:  #fd7e14 !default;
+$green: #00f837;
+// $teal:    #20c997 !default;
+// $cyan:    #17a2b8 !default;
+
+$colors: (
+  'highlight': $highlight,
+  'accent': $accent,
+);
+
+$primary: $gray-900;
+$secondary: $gray-200;
+$success: $green;
+$info: $highlight;
+$warning: $yellow;
+$danger: $red;
+// $light: $gray-100
+// $dark: $gray-700;
+
+$yiq-text-dark: $gray-900;
+
+$spacer: 1rem;
+$spacers: (
+  6: (
+    $spacer * 4,
+  ),
+);
+
+$body-bg: $gray-200;
+$body-color: $gray-900;
+
+$font-family-muli: 'Muli', sans-serif;
+
+$font-family-sans-serif: $font-family-muli;
+
+$headings-font-family: $font-family-muli;
+$headings-font-weight: 700;
+
+$text-muted: $gray-600;
+
+$blockquote-small-color: $gray-600;
+
+$btn-link-disabled-color: $gray-600;
+
+$input-bg: $gray-200;
+$input-disabled-bg: $white;
+$input-focus-bg: $gray-300;
+$input-border-color: $gray-200;
+$input-focus-border-color: $gray-300;
+$input-color: $gray-900;
+$input-placeholder-color: $gray-600;
+$input-group-addon-bg: $white;
+
+@import '../../node_modules/bootstrap/scss/_functions.scss';
+@import '../../node_modules/bootstrap/scss/_variables.scss';

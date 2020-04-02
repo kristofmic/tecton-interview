@@ -1,0 +1,57 @@
+@import '../../../../styles/variables.scss';
+
+.loading {
+  position: relative;
+  text-align: center;
+
+  .loading-icon {
+    border-radius: 50%;
+    display: inline-block;
+    height: 1.5rem;
+    position: relative;
+    width: 1.5rem;
+
+    &:after {
+      bottom: 0;
+      animation: spin 1s infinite linear;
+      content: '';
+      border-style: solid;
+      border-width: 3px;
+      border-radius: 50%;
+      height: 100%;
+      left: 0;
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 100%;
+    }
+  }
+
+  &.loading-dark {
+    .loading-icon:after {
+      border-color: $gray-900 $gray-900 transparent $gray-900;
+    }
+  }
+
+  &.loading-light {
+    .loading-icon:after {
+      border-color: $white $white transparent $white;
+    }
+  }
+
+  &.loading-primary {
+    .loading-icon:after {
+      border-color: $pink $pink transparent $pink;
+    }
+  }
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
