@@ -10,33 +10,6 @@ $gray-800: #1f323d;
 $gray-900: #001623;
 $black: #000;
 
-$highlight: #66c5fb;
-$blue: #009ff8;
-$accent: #0045f8;
-$red: #f83c00;
-$yellow: #f8df00;
-// $indigo:  #6610f2 !default;
-// $purple:  #6f42c1 !default;
-// $pink:    #e83e8c !default;
-// $orange:  #fd7e14 !default;
-$green: #00f837;
-// $teal:    #20c997 !default;
-// $cyan:    #17a2b8 !default;
-
-$colors: (
-  'highlight': $highlight,
-  'accent': $accent,
-);
-
-$primary: $gray-900;
-$secondary: $gray-200;
-$success: $green;
-$info: $highlight;
-$warning: $yellow;
-$danger: $red;
-// $light: $gray-100
-// $dark: $gray-700;
-
 $yiq-text-dark: $gray-900;
 
 $spacer: 1rem;

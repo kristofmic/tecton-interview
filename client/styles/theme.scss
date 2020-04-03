@@ -136,14 +136,28 @@ a {
 }
 
 /*** TABLE ***/
-.container-table {
-  display: table;
+.table-flex {
+  display: flex;
+  flex-direction: column;
 }
 
-.table-row {
-  display: table-row;
+.table-flex-header {
+  background-color: $dark;
+  color: $white;
+  display: flex;
 }
 
-.table-cell {
-  display: table-cell;
+.table-flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.table-flex-cell {
+  border: 1px solid $light;
+  flex-basis: 0;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }

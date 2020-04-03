@@ -3,14 +3,38 @@
 
 #table-data-page {
   .sort {
-    bottom: 0.5rem;
     cursor: pointer;
+    margin-left: 0.25rem;
     padding: 0.25rem;
-    position: absolute;
-    right: 0.5rem;
   }
 
   .breadcrumb-item {
     font-size: 1.5rem;
+  }
+
+  .table-flex-cell {
+    flex-basis: initial;
+    flex-grow: initial;
+  }
+
+  .table-flex-row.meta {
+    .table-flex-cell {
+      padding: 0;
+
+      .list-group-item {
+        border-color: $light;
+        border-radius: 0;
+        font-size: 80%;
+        padding: 0.5rem;
+
+        &:first-child {
+          border-top-width: 0.5rem;
+        }
+
+        &:last-child {
+          border-bottom-width: 0.5rem;
+        }
+      }
+    }
   }
 }
