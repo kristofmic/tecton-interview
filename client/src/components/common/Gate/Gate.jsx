@@ -28,7 +28,7 @@ function Gate(props) {
         </div>
       </div>
       {!!primaryLinkTo && (
-        <div className="row">
+        <div className="row justify-content-center">
           <div className="col col-sm-7 col-md-6 col-lg-5 col-xl-4 text-center mb-3">
             {primaryLinkExternal ? (
               <a className="btn btn-primary btn-block" href={primaryLinkTo}>
@@ -43,7 +43,7 @@ function Gate(props) {
         </div>
       )}
       {!!secondaryLinkTo && (
-        <div className="row">
+        <div className="row justify-content-center">
           <div className="col col-sm-7 col-md-6 col-lg-5 col-xl-4 text-center">
             {secondaryLinkExternal ? (
               <a className="btn btn-secondary btn-block" href={secondaryLinkTo}>
