@@ -22,7 +22,7 @@ module.exports = {
     filename: devMode ? '[name].js' : '[name].[chunkhash].min.js',
     chunkFilename: devMode ? '[name].js' : '[name].[chunkhash].min.js',
     path: path.resolve(root, 'public'),
-    publicPath: devMode ? '/public/' : 'https://d1u48y8pqyl287.cloudfront.net/',
+    publicPath: devMode ? '/public/' : 'https://d2jd0dcpwg57n9.cloudfront.net/',
   },
 
   resolve: {
