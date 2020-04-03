@@ -14,6 +14,7 @@
     "format": "prettier --config ./.prettierrc --write 'client/**/*.js' 'client/**/*.jsx' 'server/**/*.js'",
     "lint": "eslint --fix .",
     "lint:ejs": "ejslint ./views/main.ejs && ejslint ./views/error.ejs && ejslint ./views/partials/_body.ejs && ejslint ./views/partials/_head.ejs && ejslint ./views/partials/_scripts.ejs && ejslint ./views/partials/_styles.ejs",
+    "upload": "./scripts/s3_upload --directory ./public --bucket justforwhatever",
     "start:dev": "PORT=8008 NODE_ENV=development CONFIG=development nodemon -e js,json,jsx ./www | bunyan -o short"
   },
   "dependencies": {
@@ -53,6 +54,7 @@
     "@babel/preset-env": "7.8.7",
     "@babel/preset-react": "7.8.3",
     "@babel/runtime": "7.8.7",
+    "aws-sdk": "2.652.0",
     "babel-eslint": "10.1.0",
     "babel-loader": "8.0.6",
     "case-sensitive-paths-webpack-plugin": "2.3.0",
@@ -67,6 +69,7 @@
     "eslint-plugin-react": "7.18.3",
     "eslint-plugin-react-hooks": "2.5.0",
     "file-loader": "5.1.0",
+    "meow": "6.1.0",
     "mini-css-extract-plugin": "0.9.0",
     "node-sass": "4.13.1",
     "nodemon": "2.0.2",
