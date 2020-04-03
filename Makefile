@@ -20,7 +20,7 @@ push:
 
 run:
 	echo "Running ${@}"
-	docker run -p ${HOST_PORT}:${CONTAINER_PORT} -e CONFIG=${CONFIG} -e NODE_ENV=${NODE_ENV} -e ABMTV_SECRETS_PASSWORD=${ABMTV_SECRETS_PASSWORD} --name ${IMAGE} ${IMAGE_REPO}/${IMAGE}:${TAG}
+	docker run -p ${HOST_PORT}:${CONTAINER_PORT} -e CONFIG=${CONFIG} -e NODE_ENV=${NODE_ENV} --name ${IMAGE} ${IMAGE_REPO}/${IMAGE}:${TAG}
 
 exec:
 	echo "Running ${@}"
