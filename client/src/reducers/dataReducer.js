@@ -88,12 +88,27 @@ const handlers = {
   [GET_TABLE_DATA_ACTION.GET_TABLE_DATA_SUCCESS](state, action) {
     const { data, tableName } = action.payload;
 
+    const columns = data.rows.reduce((acc, row) => {
+      row.forEach((datum, i) => {
+        if (!acc[i]) {
+          acc[i] = [];
+        }
+
+        acc[i].push(datum);
+      });
+
+      return acc;
+    }, []);
+
     return update(
       ['tableData', tableName],
       prevState => {
         return {
           ...prevState,
-          data,
+          data: {
+            ...data,
+            columns,
+          },
           status: API_STATUS.SUCCESS,
         };
       },

@@ -21,7 +21,7 @@ function ErrorMessage(props) {
         <>{children}</>
       )}
       {onRetry && (
-        <Button className="btn btn-secondary btn-sm" onClick={onRetry}>
+        <Button className="btn btn-light btn-sm" onClick={onRetry}>
           <Icon icon="redo" />
           Retry
         </Button>
