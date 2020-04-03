@@ -21,7 +21,7 @@ function Gate(props) {
 
   return (
     <div className="gate">
-      <div className="row">
+      <div className="row justify-content-center">
         <div className="col col-sm-9 col-md-8 col-lg-7 text-center">
           <h4 className="mb-5">{heading}</h4>
           <p className="mb-6">{message}</p>
