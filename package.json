@@ -25,7 +25,7 @@
     "ejs": "3.0.1",
     "express": "4.17.1",
     "helmet": "3.21.3",
-    "lodash": "4.17.15",
+    "lodash": "4.17.21",
     "moment": "2.24.0",
     "nconf": "0.10.0",
     "pretty-hrtime": "1.0.3",
